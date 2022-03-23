@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Desafio 1</title>
+
+    <script>
+        function converter(){
+            var medida = document.getElementById("selectid").value;
+            var temperatura = parseInt(document.getElementById("temperatura_id").value);
+
+            if (medida == "cel") {
+                var retorno = ((temperatura * 1.8) + 32);
+                
+                alert("A medida em Fahrenheit é " + retorno);
+            }
+            else{
+                var retorno = ((temperatura - 32)/1.8);
+                alert("A medida em Celcius é " + retorno);
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Desafio 1</h1>
+
+    <form name="meu_form">
+        <label for="medida">Medida: </label>
+        <select name="selectname" id="selectid">
+            <option value="cel">Celcius</option>
+            <option value="fah">Fahrenheit</option>
+        </select>
+        <br>
+        <label for="temperatura">Temperatura: </label>
+        <input type="text" id="temperatura_id" placeholder="Digite aqui">
+        <br>
+        <input type="submit" value="Converter" onclick="converter();"/>
+    </form>
+
+    
+
+    
+</body>
+
+
+</html>

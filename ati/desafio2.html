@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Desafio 2</title>
+
+    <script>
+        function calcular(){
+            var peso = parseFloat(document.getElementById("pesor_id").value);
+            var altura = parseFloat(document.getElementById("altura_id").value);
+            var imc = peso/(altura*altura);
+
+            if (imc < 17) {
+                alert(imc + " Muito abaixo do peso");
+            } 
+            else if ((imc>=17) & (imc<=18.49)) {
+                alert(imc + " abaixo do peso");
+            }
+            else if ((imc>=18.5) & (imc<=24.99)) {
+                alert(imc + " Peso normal");
+            }
+            else if ((imc>=25) & (imc<=29.99)) {
+                alert(imc + " Acima do peso");
+            }
+            else if ((imc>=30) & (imc<=34.99)) {
+                alert(imc + " Obesidade I");
+            }
+            else if ((imc>=35) & (imc<=39.99)) {
+                alert(imc + " Obesidade II");
+            }
+            else if (imc>=40){
+                alert(imc + " Obesidade III");
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Desafio 2</h1>
+
+    <form name="meu_form">
+        <label for="peso">Peso: </label>
+        <input type="text" id="pesor_id" placeholder="Digite aqui">
+        <br>
+        <label for="altura">Altura: </label>
+        <input type="text" id="altura_id" placeholder="Digite aqui">
+        <br>
+        <input type="submit" value="calcular" onclick="calcular();"/>
+    </form>
+
+    
+
+    
+</body>
+
+
+</html>
